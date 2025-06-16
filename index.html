@@ -16,7 +16,7 @@
   <header class="modern-header">
     <div class="container header-container">
       <div class="logo-container">
-        <img src="./Recursos/logo.png" alt="Fundación Panorama de Colores" class="logo-img">
+        <img src="./Recursos/logo.jpg" alt="Fundación Panorama de Colores" class="logo-img">
       </div>
       
       <button class="menu-toggle" aria-label="Toggle menu">
@@ -30,25 +30,58 @@
           <li><a href="#programas" class="nav-link">Programas</a></li>
           <li><a href="#galeria" class="nav-link">Galería</a></li>
           <li><a href="#contacto" class="nav-link">Contacto</a></li>
-          <li><a href="#" class="btn-donate">Donar</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- Hero section -->
-  <section id="inicio" class="modern-hero">
-    <div class="hero-overlay"></div>
-    <div class="container">
-      <div class="hero-content">
-        <h1 class="hero-title">Transformando vidas en el <span>barrio Panorama</span></h1>
-        <p class="hero-text">Fundación dedicada al desarrollo integral de los niños y jóvenes de las laderas de Yumbo, Colombia, a través del arte, educación y valores comunitarios.</p>
-        <div class="hero-buttons">
+  <!-- Hero Slider Section -->
+  <section id="inicio" class="hero-slider">
+    <div class="slider-container">
+      <!-- Slide 1 -->
+      <div class="slide active" style="background-image: linear-gradient(rgba(74, 0, 224, 0.6), rgba(74, 0, 224, 0.7)), url('https://images.unsplash.com/photo-1580130732478-4d03694a6588?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+        <div class="slide-content">
+          <h1 class="hero-title">Transformando vidas en el <span>barrio Panorama</span></h1>
+          <p class="hero-text">Fundación dedicada al desarrollo integral de los niños y jóvenes de las laderas de Yumbo, Colombia.</p>
           <a href="#programas" class="btn-primary">Conoce nuestros programas</a>
-          <a href="#contacto" class="btn-secondary">Únete como voluntario</a>
+        </div>
+      </div>
+      
+      <!-- Slide 2 -->
+      <div class="slide" style="background-image: linear-gradient(rgba(0, 201, 111, 0.6), rgba(0, 201, 111, 0.7)), url('https://images.unsplash.com/photo-1541178735493-479c1a27ed24?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+        <div class="slide-content">
+          <h1 class="hero-title">Educación y <span>arte comunitario</span></h1>
+          <p class="hero-text">Programas educativos y artísticos para el desarrollo de habilidades en niños y jóvenes.</p>
+          <a href="#galeria" class="btn-primary">Ver galería</a>
+        </div>
+      </div>
+      
+      <!-- Slide 3 -->
+      <div class="slide" style="background-image: linear-gradient(rgba(255, 167, 38, 0.6), rgba(255, 167, 38, 0.7)), url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+        <div class="slide-content">
+          <h1 class="hero-title">Únete a nuestra <span>comunidad</span></h1>
+          <p class="hero-text">Voluntariados y oportunidades para apoyar nuestro trabajo en el barrio Panorama.</p>
+          <a href="#contacto" class="btn-primary">Ser voluntario</a>
         </div>
       </div>
     </div>
+    
+    <!-- Slider Controls -->
+    <button class="slider-control prev" aria-label="Previous slide">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+    <button class="slider-control next" aria-label="Next slide">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+    
+    <!-- Slider Indicators -->
+    <div class="slider-indicators">
+      <button class="indicator active" aria-label="Go to slide 1"></button>
+      <button class="indicator" aria-label="Go to slide 2"></button>
+      <button class="indicator" aria-label="Go to slide 3"></button>
+    </div>
+    
+    <!-- Hero Scroll Down -->
     <div class="hero-scroll">
       <a href="#mision" class="scroll-down">
         <i class="fas fa-chevron-down"></i>
@@ -273,7 +306,6 @@
               <select id="subject" required>
                 <option value="" disabled selected></option>
                 <option value="voluntariado">Quiero ser voluntario</option>
-                <option value="donacion">Quiero hacer una donación</option>
                 <option value="programas">Información sobre programas</option>
                 <option value="otro">Otro asunto</option>
               </select>
@@ -299,7 +331,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-about">
-          <img src="./Recursos/logo.png" alt="Fundación Panorama de Colores" class="footer-logo-img">
+          <img src="./Recursos/logo.jpg" alt="Fundación Panorama de Colores" class="footer-logo-img">
           <p>Transformando vidas a través del arte y la educación en el barrio Panorama de Yumbo desde 2025.</p>
         </div>
         
@@ -346,12 +378,6 @@
       </div>
     </div>
   </footer>
-
-  <!-- Botón flotante de donación -->
-  <a href="#" class="floating-donate">
-    <i class="fas fa-hand-holding-heart"></i>
-    <span>Donar</span>
-  </a>
 
   <script src="script.js"></script>
 </body>
