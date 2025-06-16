@@ -12,7 +12,7 @@
   --font-secondary: 'Montserrat', sans-serif;
   --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   --transition: all 0.3s ease;
-  --header-height: 80px;
+  --header-height: 90px; /* Aumentado para logo más grande */
 }
 
 * {
@@ -56,7 +56,7 @@ img {
 }
 
 /* ==================== */
-/* HEADER & LOGO */
+/* HEADER & LOGO - VERSIÓN MEJORADA */
 /* ==================== */
 .modern-header {
   position: fixed;
@@ -74,38 +74,41 @@ img {
 .header-container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start; /* Alineación superior */
   width: 100%;
+  padding-top: 15px; /* Espacio para logo más grande */
 }
 
+/* LOGO PRINCIPAL - TAMAÑO AUMENTADO Y POSICIÓN SUPERIOR */
 .logo-container {
-  width: 180px; /* Ajusta este valor según necesites */
+  width: 240px; /* Ancho aumentado */
   height: auto;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 5px 0; /* Espacio interno opcional */
+  align-items: flex-start;
+  margin-top: -15px; /* Sube el logo */
+  position: relative;
+  z-index: 1000;
+  transition: var(--transition);
 }
 
 .logo-img {
   width: 100%;
   height: auto;
-  max-height: 70px; /* Controla la altura máxima */
-  object-fit: contain; /* Mantiene proporciones */
-  transition: all 0.3s ease; /* Efecto hover suave */
+  max-height: 120px; /* Altura aumentada */
+  object-fit: contain;
+  transition: var(--transition);
+  transform: translateY(8px); /* Posición ajustada hacia arriba */
 }
 
-/* Efecto hover opcional */
-.logo-img:hover {
+/* Efecto hover mejorado */
+.logo-container:hover .logo-img {
+  transform: translateY(8px) scale(1.05);
   opacity: 0.9;
-  transform: scale(1.02);
 }
 
 /* ==================== */
-/* RESTA DEL CSS (se mantiene igual) */
+/* MENÚ DE NAVEGACIÓN */
 /* ==================== */
-
-/* Menú */
 .menu-toggle {
   background: none;
   border: none;
@@ -114,6 +117,11 @@ img {
   cursor: pointer;
   display: none;
   z-index: 1100;
+  margin-top: 10px; /* Alineación con logo */
+}
+
+.modern-nav {
+  margin-top: 20px; /* Compensación por logo grande */
 }
 
 .modern-nav ul {
@@ -126,6 +134,7 @@ img {
   padding: 5px 0;
   position: relative;
   transition: var(--transition);
+  font-size: 1rem;
 }
 
 .nav-link::after {
@@ -146,9 +155,12 @@ img {
 
 .nav-link.active {
   color: var(--primary-color);
+  font-weight: 600;
 }
 
-/* Hero Slider */
+/* ==================== */
+/* HERO SLIDER */
+/* ==================== */
 .hero-slider {
   height: calc(100vh - var(--header-height));
   position: relative;
@@ -304,7 +316,9 @@ img {
   transform: translateY(5px);
 }
 
-/* Secciones comunes */
+/* ==================== */
+/* SECCIONES COMUNES */
+/* ==================== */
 .section-header {
   text-align: center;
   margin-bottom: 60px;
@@ -329,7 +343,9 @@ img {
   margin: 0 auto;
 }
 
-/* Botones */
+/* ==================== */
+/* BOTONES */
+/* ==================== */
 .btn-primary {
   display: inline-block;
   background-color: var(--primary-color);
@@ -350,9 +366,11 @@ img {
   box-shadow: var(--box-shadow);
 }
 
-/* Sección Misión/Visión */
+/* ==================== */
+/* SECCIÓN MISIÓN/VISIÓN */
+/* ==================== */
 .modern-mission {
-  padding: 80px 0;
+  padding: 100px 0;
   background-color: var(--light-color);
 }
 
@@ -416,9 +434,11 @@ img {
   margin-right: 10px;
 }
 
-/* Sección Historia */
+/* ==================== */
+/* SECCIÓN HISTORIA */
+/* ==================== */
 .history-section {
-  padding: 80px 0;
+  padding: 100px 0;
   background-color: var(--white);
 }
 
@@ -498,9 +518,11 @@ img {
   margin: 25px 0;
 }
 
-/* Sección de Programas */
+/* ==================== */
+/* SECCIÓN DE PROGRAMAS */
+/* ==================== */
 .modern-programs {
-  padding: 80px 0;
+  padding: 100px 0;
   background-color: var(--light-color);
 }
 
@@ -583,7 +605,9 @@ img {
   gap: 8px;
 }
 
-/* Objetivos */
+/* ==================== */
+/* OBJETIVOS */
+/* ==================== */
 .objectives-section {
   margin-top: 50px;
 }
@@ -637,9 +661,11 @@ img {
   font-size: 0.9rem;
 }
 
-/* Galería */
+/* ==================== */
+/* GALERÍA */
+/* ==================== */
 .gallery-section {
-  padding: 80px 0;
+  padding: 100px 0;
   background-color: var(--white);
 }
 
@@ -691,9 +717,11 @@ img {
   font-weight: 600;
 }
 
-/* Contacto */
+/* ==================== */
+/* CONTACTO */
+/* ==================== */
 .modern-contact {
-  padding: 80px 0;
+  padding: 100px 0;
   background-color: var(--light-color);
 }
 
@@ -844,7 +872,9 @@ img {
   margin-top: 10px;
 }
 
-/* Footer */
+/* ==================== */
+/* FOOTER */
+/* ==================== */
 .modern-footer {
   background: var(--dark-color);
   color: var(--white);
@@ -863,7 +893,7 @@ img {
 }
 
 .footer-logo-container {
-  width: 150px;
+  width: 180px; /* Tamaño aumentado */
   height: auto;
   margin-bottom: 20px;
 }
@@ -871,7 +901,7 @@ img {
 .footer-logo-img {
   width: 100%;
   height: auto;
-  max-height: 60px;
+  max-height: 80px; /* Tamaño aumentado */
   object-fit: contain;
   filter: brightness(0) invert(1);
 }
@@ -986,14 +1016,28 @@ img {
   color: var(--primary-color);
 }
 
-/* Responsive Design */
+/* ==================== */
+/* DISEÑO RESPONSIVE */
+/* ==================== */
 @media (max-width: 1200px) {
   .logo-container {
-    width: 150px;
+    width: 200px;
+  }
+  .logo-img {
+    max-height: 110px;
   }
 }
 
 @media (max-width: 992px) {
+  .logo-container {
+    width: 180px;
+    margin-top: -10px;
+  }
+  .logo-img {
+    max-height: 100px;
+    transform: translateY(5px);
+  }
+  
   .section-header {
     margin-bottom: 50px;
   }
@@ -1006,11 +1050,20 @@ img {
   .footer-grid {
     gap: 25px;
   }
+  
+  .modern-nav {
+    margin-top: 15px;
+  }
 }
 
 @media (max-width: 768px) {
+  :root {
+    --header-height: 85px; /* Ajustado para móviles */
+  }
+  
   .menu-toggle {
     display: block;
+    margin-top: 5px;
   }
 
   .modern-nav {
@@ -1022,6 +1075,7 @@ img {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     transition: var(--transition);
     padding: 20px;
+    margin-top: 0;
   }
 
   .modern-nav.active {
@@ -1034,7 +1088,13 @@ img {
   }
 
   .logo-container {
-    width: 120px;
+    width: 160px;
+    margin-top: -5px;
+  }
+  
+  .logo-img {
+    max-height: 90px;
+    transform: translateY(3px);
   }
 
   .history-content {
@@ -1062,12 +1122,14 @@ img {
 }
 
 @media (max-width: 576px) {
-  :root {
-    --header-height: 70px;
-  }
-
   .logo-container {
-    width: 100px;
+    width: 140px;
+    margin-top: 0;
+  }
+  
+  .logo-img {
+    max-height: 80px;
+    transform: translateY(0);
   }
 
   .hero-title {
