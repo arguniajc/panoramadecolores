@@ -77,21 +77,17 @@ img {
   width: 100%;
 }
 
-/* Logo Container - Optimizado para 1080×1350px (relación 4:5) */
 .logo-container {
-  width: 120px;
-  height: 150px;
-  display: flex;
-  align-items: center;
-  transition: var(--transition);
+   border: 2px solid red; 
+  width: 200px;
+  height: 100px;
+  background-color: #eee; 
 }
-
 .logo-img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center;
-  transition: transform 0.3s ease;
+ border: 2px solid blue; 
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 .logo-img:hover {
