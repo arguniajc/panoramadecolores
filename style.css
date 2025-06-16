@@ -188,6 +188,8 @@ h4 { font-size: 1.4rem; }
 .logo-container {
   display: flex;
   align-items: center;
+  width: 200px;
+    right: auto;
 }
 
 .logo-img {
