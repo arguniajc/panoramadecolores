@@ -79,34 +79,26 @@ img {
 }
 
 .logo-container {
-  /* Forzamos visibilidad para diagnóstico */
-  border: 2px solid red !important;
-  background-color: rgba(238, 238, 238, 0.5) !important;
-  width: 200px !important;
-  height: 100px !important;
-  display: block !important;
-  visibility: visible !important;
-  position: relative !important;
-  z-index: 9999 !important;
-  overflow: visible !important;
+  width: 180px; /* Ajusta este valor según necesites */
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 0; /* Espacio interno opcional */
 }
 
 .logo-img {
-  /* Forzamos visibilidad de la imagen */
-  border: 2px solid blue !important;
-  width: 100% !important;
-  height: auto !important;
-  max-height: 80px !important;
-  display: block !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-  position: relative !important;
-  z-index: 10000 !important;
+  width: 100%;
+  height: auto;
+  max-height: 70px; /* Controla la altura máxima */
+  object-fit: contain; /* Mantiene proporciones */
+  transition: all 0.3s ease; /* Efecto hover suave */
 }
 
-.logo-container:hover .logo-img {
-  transform: scale(1.05);
+/* Efecto hover opcional */
+.logo-img:hover {
   opacity: 0.9;
+  transform: scale(1.02);
 }
 
 /* ==================== */
